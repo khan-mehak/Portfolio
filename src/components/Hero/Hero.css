@@ -1,0 +1,180 @@
+:root {
+    --hero-bg: white; /* Default background color */
+    --hero-text: black; /* Default text color */
+    --hero-highlight: brown; /* Highlight color for span */
+    --hero-button-bg: rebeccapurple; /* Button background */
+    --hero-button-border: snow; /* Button border color */
+    --hero-button-hover-border: rebeccapurple; /* Button hover border */
+}
+
+[data-theme="dark"] {
+    --hero-bg: #121212; /* Dark mode background */
+    --hero-text: white; /* Dark mode text */
+    --hero-highlight: lightcoral; /* Dark mode highlight color */
+    --hero-button-bg: black; /* Dark mode button background */
+    --hero-button-border: #ffffff; /* Dark mode button border */
+    --hero-button-hover-border: #ffab40; /* Dark mode hover border */
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+    background-color: var(--hero-bg); /* Dynamic background */
+    color: var(--hero-text); /* Dynamic text color */
+    padding: 40px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero a{
+    text-decoration: none;
+}
+
+.hero img {
+    margin-top: 150px;
+    max-width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    text-align: center;
+    width: 70%;
+    font-size: 90px;
+    font-weight: 600;
+    color: var(--hero-text);
+}
+
+.hero h1 span {
+    background-color: var(--hero-highlight); /* Dynamic highlight color */
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.hero p {
+    width: 50%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.hero-action {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.hero-connect,
+.hero-resume {
+    padding: 25px 45px;
+    border-radius: 50px;
+    background: rebeccapurple; /* Dynamic button background */
+    cursor: pointer;
+    border: 2px solid var(--hero-button-border); /* Dynamic button border */
+    color: white;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-connect:hover,
+.hero-resume:hover {
+    transform: scale(1.05);
+    border-color: var(--hero-button-hover-border); /* Dynamic hover border */
+}
+
+.hero-resume {
+    padding: 25px 75px;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .hero p {
+        font-size: 22px;
+    }
+
+    .hero-action {
+        font-size: 22px;
+    }
+
+    .hero-connect,
+    .hero-resume {
+        padding: 20px 40px;
+    }
+
+    .hero-resume {
+        padding: 20px 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero img {
+        margin-top: 120px;
+        width: 260px;
+    }
+
+    .hero h1 {
+        margin-top: 50px;
+        width: 90%;
+        font-size: 50px;
+    }
+
+    .hero p {
+        width: 80%;
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .hero-action {
+        gap: 16px;
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+
+    .hero-connect,
+    .hero-resume {
+        padding: 20px 30px;
+        border-radius: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero img {
+        margin-top: 100px;
+        width: 200px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        width: 90%;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .hero-action {
+        gap: 12px;
+        font-size: 16px;
+    }
+
+    .hero-connect,
+    .hero-resume {
+        padding: 15px 25px;
+        border-radius: 30px;
+        /* padding: 15px; */
+    }
+
+    .hero-resume {
+        padding: 15px 25px;
+    }
+}

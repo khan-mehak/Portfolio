@@ -1,0 +1,116 @@
+:root {
+    --footer-bg: black;
+    --footer-text: white;
+    --footer-hover: #b923e1;
+    --footer-border: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] {
+    --footer-bg: white;
+    --footer-text: black;
+    --footer-hover: #7b42f6; 
+    --footer-border: rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    margin: 50px 70px;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    gap: 20px;
+    padding: 40px 20px; 
+    color: var(--footer-text);
+    background-color: var(--footer-bg);
+    border-bottom: 2px solid var(--footer-border); 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: var(--footer-text); 
+}
+
+.footer-bottom-right {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-bottom-right p {
+    margin: 0;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    cursor: pointer;
+    color: var(--footer-text); 
+}
+
+.footer-bottom-right p:hover {
+    color: var(--footer-hover); 
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .footer {
+        margin: 40px 50px;
+        padding: 30px 15px;
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .footer-bottom {
+        font-size: 16px;
+    }
+
+    .footer-bottom-right {
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        margin: 30px 20px;
+        padding: 20px 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .footer-bottom-right {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        margin: 20px 10px;
+        padding: 15px 5px;
+        text-decoration: none;
+        
+    }
+
+    .footer :hover{
+        color: rebeccapurple;
+        cursor: pointer;
+        text-decoration: none;
+
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+
+    .footer-bottom-right {
+        gap: 1px;
+        margin-bottom: 12px;
+        text-align: center;
+        
+    }
+}

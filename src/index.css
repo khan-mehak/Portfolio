@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    transition: all 0.3s ease; /* Smooth transition for theme changes */
+}
+
+:root {
+    --background-light: #ffffff;
+    --background-dark: #121212;
+    --text-light: #000000;
+    --text-dark: #ffffff;
+    --accent: saddlebrown;
+    --hover-accent: rebeccapurple;
+    --border-light: snow;
+    --border-dark: #333333;
+}
+
+[data-theme="light"] {
+    --background: var(--background-light);
+    --text: var(--text-light);
+    --border: var(--border-light);
+}
+
+[data-theme="dark"] {
+    --background: var(--background-dark);
+    --text: var(--text-dark);
+    --border: var(--border-dark);
+}

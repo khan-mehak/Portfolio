@@ -1,0 +1,191 @@
+:root {
+    --navbar-bg: black;
+    --navbar-color: white;
+}
+
+[data-theme="light"] {
+    --navbar-bg: white;
+    --navbar-color: black;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: var(--navbar-bg);
+    color: var(--navbar-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    text-align: center;
+    list-style: none;
+    gap: 30px;
+    font-size: 18px;
+    margin: 0 auto; /* Center the nav in the navbar */
+    padding: 0;
+    color: var(--navbar-color);
+    width: 100%; /* Ensures full width for centering */
+}
+
+.nav-menu li {
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu li:hover {
+    color: rebeccapurple;
+    transform: scale(1.1);
+}
+
+/* Toggle Button (FontAwesome) */
+.nav-toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--navbar-color);
+    font-size: 24px;
+}
+
+/* Navbar Logo */
+.nav-logo {
+    height: 50px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-menu-close-btn {
+    display: none;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--navbar-color);
+    font-size: 15px;
+    transition: transform 0.3s ease;
+    padding-left: 70px;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.anchor-link {
+    text-decoration: none;
+    color: var(--navbar-color);
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+    .navbar {
+        padding:0px;
+        position: relative;
+    }
+
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        right: -100%;
+        background-color: var(--navbar-bg);
+        width: 250px;
+        height: 40%;
+        z-index: 1000;
+        padding-top: 60px;
+        transition: right 0.4s ease-in-out;
+    }
+
+    .nav-menu.open {
+        right: 12px;
+        text-align: center;
+    }
+
+    .nav-menu li {
+        font-size: 20px;
+        top: 20px;
+        padding-left: 30px;
+        margin-top: 20px;
+        height: 10px;
+        cursor: pointer;
+
+    }
+
+    .nav-menu li :hover{
+        color: rebeccapurple;
+    }
+
+    .nav-toggle-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 80px;
+    }
+
+    .nav-menu-close-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--navbar-color);
+        font-size: 24px;
+    }
+
+    .theme-toggle{
+        display: block;
+        position: absolute;
+        left: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    .nav-menu li {
+        font-size:20px;
+        margin: 10px 10px;
+        /* line-height: 2px; */
+        /* padding-left: 15px; */
+        /* top: 2px; */
+    }
+
+    .nav-menu li :hover{
+        color: rebeccapurple;
+        cursor: pointer;
+    }
+
+    .nav-toggle-btn {
+        font-size: 18px;
+    }
+    
+    .theme-toggle{
+        display: block;
+        position: absolute;
+        left: 200px;
+    }
+}

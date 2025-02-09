@@ -1,0 +1,107 @@
+.h1{
+  font-size: 4em;
+  text-align: center;
+}
+
+
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures 2 boxes in a row */
+  gap: 80px;
+  margin-top: 20px;
+  padding: 5px 5px;
+  background-color: white;
+  color: black;
+  margin: 30px 30px;
+
+  /* width: 90%; */
+  /* height: 100vh; */
+  
+}
+
+.lang {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 80;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: aliceblue;
+  /* background-color: #2b2b2b; */
+  /* height:90%; */
+}
+
+.lang:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.lang h1, .lang h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: saddlebrown;
+}
+
+.lang ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.lang li {
+  margin-bottom: 5px;
+  font-size: 18px;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.lang li:hover {
+  color: purple;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    gap: 30px;
+  }
+
+  .lang {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    gap: 40px;
+    margin: 20px 20px;
+    width: 80%;
+  }
+
+  .lang {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    gap: 30px;
+    margin: 20px 20px;
+    width: 80%;
+  }
+
+  .lang {
+    padding: 15px;
+  }
+
+  .lang h1, .lang h2 {
+    font-size: 20px;
+  }
+
+  .lang li {
+    font-size: 16px;
+  }
+}
