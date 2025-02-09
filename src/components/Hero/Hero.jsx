@@ -1,7 +1,7 @@
 import React from "react";
 import "./hero.css";
 import profile from "../../assets/profile.png";
-import resume from "../../assets/profile.png"; // Ensure this is a PDF file
+import resume from "../../assets/profile.png"; 
 
 const Hero = () => {
   return (

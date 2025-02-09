@@ -26,7 +26,7 @@
 
 .work-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Ensures 3 boxes in a row */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 40px;
 }
 
@@ -39,8 +39,8 @@
 
 .work-item img {
     box-sizing: border-box;
-    width: 100%;  /* Full width within the grid item */
-    max-width: 200px; /* Set a maximum width for the images */
+    width: 100%; 
+    max-width: 200px; 
     height: auto;
     cursor: pointer;
     border-radius: 8px;
@@ -103,12 +103,12 @@
     }
 
     .work-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 boxes in a row */
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     .work-item img {
         width: 100%;
-        max-width: 200px; /* Ensure the same size for images */
+        max-width: 200px; 
     }
 
     .work-showmore {
@@ -131,12 +131,12 @@
     }
 
     .work-container {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr;
     }
 
     .work-item img {
         width: 100%;
-        max-width: 200px; /* Ensure the same size for images */
+        max-width: 200px;
     }
 
     .work-showmore {
@@ -160,7 +160,7 @@
 
     .work-item img {
         width: 100%;
-        max-width: 200px; /* Ensure the same size for images */
+        max-width: 200px; 
     }
 
     .work-showmore {

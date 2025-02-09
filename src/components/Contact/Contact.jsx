@@ -4,14 +4,14 @@ import mail from '../../assets/mail.png';
 import location from '../../assets/location.jpg';
 
 const Contact = () => {
-  const [result, setResult] = useState(""); // State to hold result message
+  const [result, setResult] = useState(""); 
 
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending...");
     const formData = new FormData(event.target);
 
-    // Replace this with your actual Web3Forms access key
+    
     formData.append("access_key", "60fdc7f3-6c29-4a5f-a408-ec0e115d9801");
 
     try {

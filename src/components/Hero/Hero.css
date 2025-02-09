@@ -72,9 +72,9 @@
 .hero-resume {
     padding: 25px 45px;
     border-radius: 50px;
-    background: rebeccapurple; /* Dynamic button background */
+    background: rebeccapurple; 
     cursor: pointer;
-    border: 2px solid var(--hero-button-border); /* Dynamic button border */
+    border: 2px solid var(--hero-button-border); 
     color: white;
     transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
@@ -82,7 +82,7 @@
 .hero-connect:hover,
 .hero-resume:hover {
     transform: scale(1.05);
-    border-color: var(--hero-button-hover-border); /* Dynamic hover border */
+    border-color: var(--hero-button-hover-border); 
 }
 
 .hero-resume {

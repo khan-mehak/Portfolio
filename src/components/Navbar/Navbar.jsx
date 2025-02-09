@@ -20,20 +20,20 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      {/* Logo */}
+    
       <img src={logo} alt="Company Logo" className="nav-logo" />
 
-      {/* Theme Toggle Button */}
+      
       <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle Theme">
         <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} size="2x" />
       </button>
 
-      {/* Menu Toggle Button */}
+      
       <button onClick={handleMenuToggle} className="nav-toggle-btn" aria-label="Toggle Menu">
         <FontAwesomeIcon icon={menuOpen ? faXmark : faBars} size="2x" />
       </button>
 
-      {/* Navigation Menu */}
+    
       <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
         <button onClick={handleMenuToggle} className="nav-menu-close-btn" aria-label="Close Menu">
           <FontAwesomeIcon icon={faXmark} size="2x" />

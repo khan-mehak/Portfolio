@@ -28,15 +28,15 @@
 .nav-menu {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center horizontally */
+    justify-content: center; 
     text-align: center;
     list-style: none;
     gap: 30px;
     font-size: 18px;
-    margin: 0 auto; /* Center the nav in the navbar */
+    margin: 0 auto; 
     padding: 0;
     color: var(--navbar-color);
-    width: 100%; /* Ensures full width for centering */
+    width: 100%; 
 }
 
 .nav-menu li {
@@ -169,9 +169,7 @@
     .nav-menu li {
         font-size:20px;
         margin: 10px 10px;
-        /* line-height: 2px; */
-        /* padding-left: 15px; */
-        /* top: 2px; */
+        
     }
 
     .nav-menu li :hover{

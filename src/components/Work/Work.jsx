@@ -4,10 +4,10 @@ import workData from '../../assets/workData';
 import arrow from '../../assets/arrow.png';
 
 const Work = () => {
-  const [visibleProjects, setVisibleProjects] = useState(3); // Initially show 3 projects
+  const [visibleProjects, setVisibleProjects] = useState(3); 
 
   const handleShowMore = () => {
-    setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 3); // Show 3 more projects
+    setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 3); 
   };
 
   return (
